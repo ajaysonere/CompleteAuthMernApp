@@ -1,25 +1,28 @@
 import { Link } from "react-router-dom";
-// import { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
 import avatar from '../assets/profile.png';
 
 import styles from "../styles/username.module.css";
+import { usernameValidate } from "../helper/validate";
 
 export function Username(){
      
     const formik = useFormik({
         initialValues:{
-            username :''   
+            username :'' 
         }, 
+        validate : usernameValidate,
         validateOnBlur:false,
         validateOnChange :false,
         onSubmit : async values => {
-            console.log(values);
         }
     })
 
     return(
         <div className="container mx-auto ">
+            <Toaster position="top-center" reverseOrder = {false}></Toaster>
+     
             <div className="flex justify-center items-center h-screen ">
                 
                 <div className= {styles.glass}>

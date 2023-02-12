@@ -4,11 +4,11 @@ import {BrowserRouter , Routes , Route} from 'react-router-dom';
 // All route of the Project 
 import { Username } from './components/Username';
 import { PassWord } from './components/Password';
-import { Register } from './components/Register';
 import { Profile } from './components/Profile';
 import { Recovery } from './components/Recovery';
 import { Reset } from './components/Reset';
 import { PageNotFound } from './components/PageNotFound';
+import { Signup } from './components/Signup';
 
 
 export function App(){
@@ -23,7 +23,7 @@ export function App(){
 
               <Route path='/password' element = {<PassWord/>}></Route>
 
-              <Route path='/register' element= {<Register/>}></Route>
+              <Route path='/signup' element= {<Signup />}></Route>
 
               <Route path='/profile' element={<Profile/>}></Route>
 

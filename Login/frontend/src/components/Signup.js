@@ -6,7 +6,7 @@ import avatar from '../assets/profile.png';
 import styles from "../styles/username.module.css";
 import { passwordValidate } from "../helper/validate";
 
-export function PassWord() {
+export function Signup() {
 
     const formik = useFormik({
         initialValues: {
